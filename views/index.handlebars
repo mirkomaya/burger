@@ -1,0 +1,25 @@
+<img src="../public/assets/img/burger.png" width="200" class="burgerImg" alt="burger">
+<h1 class="text-center">Eat-Da-Burger!</h1>
+<ul class="currentBurgers">
+    {{#each burgers}}
+    {{#unless devoured}}
+    <li data-devour="{{devour}}" class="burger">
+        <p class="{{id}}">{{burger_name}} <button class="devour" data-id="{{id}}">Devour</button></p>
+    </li>
+    {{/unless}}
+    {{/each}}
+</ul>
+<ul class="devouredBurgers">
+    {{#each burgers}}
+    {{#if devoured}}
+    <li class="burger">
+        <p class="{{id}}">{{burger_name}}</p>
+    </li>
+    {{/if}}
+    {{/each}}
+</ul>
+<form class="newBurger text-center">
+    <input type="text" class="burgerName" name="name">
+    <br>
+    <button type="submit">Submit</button>
+</form>
