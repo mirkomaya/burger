@@ -1,4 +1,4 @@
-var connection = require("./connection");
+var connection = require("../config/connection");
 
 // generate MySQL syntax
 function printQuestionMarks(num) {
